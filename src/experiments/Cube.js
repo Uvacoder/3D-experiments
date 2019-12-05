@@ -50,7 +50,7 @@ const Box = () => {
 	)
 }
 
-const SimpleCube = () => (
+const Cube = () => (
 	<Canvas
 		camera={{ position: [0, 0, 5] }}
 		onCreated={({ gl }) => {
@@ -64,4 +64,4 @@ const SimpleCube = () => (
 	</Canvas>
 )
 
-export default SimpleCube
+export default Cube

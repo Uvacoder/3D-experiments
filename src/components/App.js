@@ -9,8 +9,8 @@ import Container from './Container'
 import GlobalStyle from './Global'
 
 // Experiments
-import FrontPage from '../experiments/FrontPage'
-import SimpleCube from '../experiments/SimpleCube'
+import Intro from '../experiments/Intro'
+import Cube from '../experiments/Cube'
 
 const App = () => {
 	return (
@@ -27,8 +27,8 @@ const App = () => {
 					</Sidebar>
 					<Main>
 						<Switch>
-							<Route path='/' exact component={FrontPage} />
-							<Route path='/simple-cube' component={SimpleCube} />
+							<Route path='/' exact component={Intro} />
+							<Route path='/simple-cube' component={Cube} />
 						</Switch>
 					</Main>
 				</Router>
