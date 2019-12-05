@@ -29,6 +29,7 @@ const App = () => {
 						<Switch>
 							<Route path='/' exact component={Intro} />
 							<Route path='/simple-cube' component={Cube} />
+							<Route render={() => <h1>404</h1>} />
 						</Switch>
 					</Main>
 				</Router>
