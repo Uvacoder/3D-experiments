@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
@@ -6,6 +6,7 @@ import { Canvas, extend, useThree, useRender } from 'react-three-fiber'
 import { useSpring, a } from 'react-spring/three'
 
 import Main from './Main'
+import Title from './Title'
 import Sidebar from './Sidebar'
 import Container from './Container'
 import GlobalStyle from './Global'
@@ -30,13 +31,6 @@ const Controls = () => {
 		/>
 	)
 }
-
-const Plane = () => (
-	<mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]} receiveShadow>
-		<planeBufferGeometry attach='geometry' args={[100, 100]} />
-		<meshPhysicalMaterial attach='material' color='white' />
-	</mesh>
-)
 
 const Box = () => {
 	const [hovered, setHover] = useState(false)
@@ -67,7 +61,9 @@ const App = () => {
 		<>
 			<GlobalStyle />
 			<Container>
-				<Sidebar />
+				<Sidebar>
+					<Title>3D Experiments</Title>
+				</Sidebar>
 				<Main>
 					<Canvas
 						camera={{ position: [0, 0, 5] }}
@@ -79,7 +75,6 @@ const App = () => {
 						<fog attach='fog' args={['white', 5, 15]} />
 						<Controls />
 						<Box />
-						<Plane />
 					</Canvas>
 				</Main>
 			</Container>
