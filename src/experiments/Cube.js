@@ -31,7 +31,7 @@ const Box = () => {
 	const [active, setActive] = useState(false)
 	const props = useSpring({
 		scale: active ? [1.5, 1.5, 1.5] : [1, 1, 1],
-		color: hovered ? 'skyblue' : 'tomato',
+		color: hovered ? '#70a1ff' : '#1e90ff',
 	})
 
 	return (
@@ -58,7 +58,6 @@ const Cube = () => (
 			gl.shadowMap.type = THREE.PCFSoftShadowMap
 		}}
 	>
-		<fog attach='fog' args={['white', 5, 15]} />
 		<Controls />
 		<Box />
 	</Canvas>
