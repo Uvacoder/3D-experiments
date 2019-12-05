@@ -26,6 +26,11 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-color: #333;
     font-family: 'Roboto Mono', monospace;
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
   }
 
   cavans {
