@@ -13,29 +13,29 @@ import Intro from '../experiments/Intro'
 import Cube from '../experiments/Cube'
 
 const App = () => {
-	return (
-		<>
-			<GlobalStyle />
-			<Container>
-				<Router>
-					<Sidebar>
-						<Title>
-							<Link to='/'>3D Experiments</Link>
-						</Title>
+  return (
+    <>
+      <GlobalStyle />
+      <Container>
+        <Router>
+          <Sidebar>
+            <Title>
+              <Link to='/'>3D Experiments</Link>
+            </Title>
 
-						<Link to='/simple-cube'>Simple Cube</Link>
-					</Sidebar>
-					<Main>
-						<Switch>
-							<Route path='/' exact component={Intro} />
-							<Route path='/simple-cube' component={Cube} />
-							<Route render={() => <h1>404</h1>} />
-						</Switch>
-					</Main>
-				</Router>
-			</Container>
-		</>
-	)
+            <Link to='/simple-cube'>Simple Cube</Link>
+          </Sidebar>
+          <Main>
+            <Switch>
+              <Route path='/' exact component={Intro} />
+              <Route path='/simple-cube' component={Cube} />
+              <Route render={() => <h1>404</h1>} />
+            </Switch>
+          </Main>
+        </Router>
+      </Container>
+    </>
+  )
 }
 
 export default App
